@@ -10,3 +10,9 @@
 * ```bash backtranslation_scripts/combine_data_from_sources.sh```
 * ```bash backtranslation_scripts/preprocess-augmented-bilingual-data.sh```
 * ```bash backtranslation_scripts/traineval-augmented-bilingual-data.sh```
+
+
+### To run the multilingual pretraining code
+* ```cd code```
+* ```python mbart_hugging.py``` to obtain the predicted translations from pretrained models like MBart50. These are saved in a ```.pred``` file such as ```aze_eng_test.pred```
+* ```bash score_mbart.sh``` to run the scoring script. This will produce a ```.score``` file like ```aze_eng_test.score``` which contains the BLEU and the COMET scores
