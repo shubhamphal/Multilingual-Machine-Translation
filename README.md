@@ -16,3 +16,10 @@
 * ```cd code```
 * ```python mbart_hugging.py``` to obtain the predicted translations from pretrained models like MBart50. These are saved in a ```.pred``` file such as ```aze_eng_test.pred```
 * ```bash score_mbart.sh``` to run the scoring script. This will produce a ```.score``` file like ```aze_eng_test.score``` which contains the BLEU and the COMET scores
+
+### To run the crosslingual transfer code
+* ```cd code```
+* ```preprocess-ted-bilingual.sh``` to preprocess aze and eng raw data.
+* ```preprocess-ted-bilingual-tur.sh``` to preprocess tur and eng raw data.
+* For aze-eng using tur-eng, run ```bash traineval_flores_tur_eng.sh``` to train a high-resource tur-eng translation model. Then run ```bash traineval_flores_aze_eng_from_tur.sh``` to train low-resource aze-eng intializing weights from the previous training.
+* For eng-aze using eng-tur, run ```bash traineval_flores_eng_tur.sh``` to train a high-resource eng-tur translation model. Then run ```bash traineval_flores_eng_aze_from_tur.sh``` to train low-resource eng-aze intializing weights from the previous training.
