@@ -14,8 +14,10 @@
 
 ### To run the multilingual pretraining code
 * ```cd code```
-* ```python mbart_hugging.py``` to obtain the predicted translations from pretrained models like MBart50. These are saved in a ```.pred``` file such as ```aze_eng_test.pred```
-* ```bash score_mbart.sh``` to run the scoring script. This will produce a ```.score``` file like ```aze_eng_test.score``` which contains the BLEU and the COMET scores
+* ```python multilingual_pretrained_model/mbart_hugging.py``` to obtain the predicted translations from the pretrained MBart50 model. These are saved in a ```.pred``` file such as ```aze_eng_test.pred``` in ```outputs/multilingual_pretrained_model/MBart50```
+* ```bash multilingual_pretrained_model/score_mbart.sh``` to run the scoring script for MBart50. This will produce a ```.score``` file like ```aze_eng_test.score``` which contains the BLEU and the COMET scores in ```outputs/multilingual_pretrained_model/MBart50```
+* ```python multilingual_pretrained_model/m2m_hugging.py``` to obtain the predicted translations from the pretrained M2M100 model. These are saved in a ```.pred``` file such as ```aze_eng_test.pred``` in ```outputs/multilingual_pretrained_model/M2M100```
+* ```bash multilingual_pretrained_model/score_m2m.sh``` to run the scoring script for M2M100. This will produce a ```.score``` file like ```aze_eng_test.score``` which contains the BLEU and the COMET scores in ```outputs/multilingual_pretrained_model/M2M100```
 
 ### To run the crosslingual transfer code
 * ```cd code```
